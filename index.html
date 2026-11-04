@@ -3,74 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eli Chance | Personal Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    
-    
-    <header class="hero">
-        <nav class="navbar">
-            <div class="logo">EC</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1>Eli Chance</h1>
-            <p class="tagline">Intermediate Web Designer & Front-End Developer</p>
-            <a href="#projects" class="btn">View My Work</a>
+    <title>Eli Chance |Portfolio Redesign</title>
+    <!--Bootstrap 5 CSS CDN Link-->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        /*smooth scrolling for anchor links*/
+        html {
+            scroll-behavior: smooth;
+        }
+        /*Custom hero styling with a clean gradient background*/
+        .hero-section {
+            background: linear-gradient(135deg, 1e3c72 0%, 2a5298 100%);
+            min-height: 55vh;
+        }
+        /* Fixed sizing for project cards to ensure alignment*/
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>    
+<body class="bg-light text-dark">
+
+    <!--1. Bootstrap Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">EC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNav" aria-controls="portfolioNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="portfolioNav">
+                <ul class="navbar-nav ms-autofw-semibold ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--2. Hero section (Welcome & Tagline)-->
+    <header class="hero-section d-flex align-items-center text-white text-center py-5 shadow-sm">
+        <div class="container py-4">
+            <h1 class="display-3 fw-bold mb-2">Eli Chance</h1>
+            <p class="lead fs-4 text-info-emphasis mb-4">Front-End-Developer & UI/UX Designer</p>
+            <a href="#projects" class="btn btn-info btn-lg fw-bold px-4 shadow">Explore My Work</a>
         </div>
     </header>
-    
-    
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am currently studying Intermediate Web Design, focusing on creating responsive and highly interactive user interfaces. My academic interest revolve around modern semantic HTML,layouts and functional scripting to enhance user engagement. Outside of designing websites, I want to one day design websites for video game companis, I like gaming, hiking, hanging out with friends and karaoke also love comic books.</p>
-    </section>
-    
-    
-    <section id="skills" class="section bg-light">
-        <h2>Skills & Tools</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Responsive Design</div>
-            <div class="skill-card">Semantic HTML5</div>
-            <div class="skill-card">Custom CSS3 Layouts</div>
-            <div class="skill-card">UI/UX Problem Framing</div>
-            <div class="skill-card">Git & Github Version Control</div>
+
+    <!-- 3. About Me Section -->
+<section id="about" class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+            <h2 class="fw-bold mb-3 border-bottom pb-2 d-inline-block border-3 border-info">About Me</h2>
+            <p class="lead text-muted fs-6">
+                Welcome to my redesigned portfolio! I specialize in crafting clean, responsive, and highly efficient user interfaces using modern design systems. My focus centers on leveraging utility-first frameworks like Bootstrap to build seamless digital layouts that provide exceptional user experiences across all device sizes.
+            </p>
         </div>
-    </section>
-    
-    
-    <section id="projects" class="section">
-        <h2>Featured Coursework</h2>
-        <div class="projcts-grid">
-            <div class="project-card">
-                <h3>Responsive Web Store Layout</h3>
-                <p>A mobile-friendly storefront concept utilizing flexible layouts and modern typography sizing rules to adapt across devices.</p>
-                <a href="https://github.com" target="_blank" class="project-link">View Repository</a>
-            </div>
-            <div class="project-card">
-                <h3>CSS Interaction & Effects</h3>
-                <p>An interactive exploration featuring custom transitions, transformations, and responsive structural UI components built from scratch.</p>
-                <a href="https://github.com" target="_blank" class="project-link">View Repository</a>
+    </div>
+</section>
+
+<!-- 4. Skills & Tools Section (Using Bootstrap Badges) -->
+<section id="skills" class="bg-white py-5 shadow-sm">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4 border-bottom pb-2 d-inline-block border-3 border-info">Skills & Expertise</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-3 max-width-md mx-auto" style="max-width: 600px;">
+            <span class="badge bg-dark fs-6 px-3 py-2 shadow-sm">Responsive Web Design</span>
+            <span class="badge bg-dark fs-6 px-3 py-2 shadow-sm">Bootstrap 5 Framework</span>
+            <span class="badge bg-dark fs-6 px-3 py-2 shadow-sm">Semantic HTML5</span>
+            <span class="badge bg-dark fs-6 px-3 py-2 shadow-sm">Custom CSS3 Layouts</span>
+            <span class="badge bg-dark fs-6 px-3 py-2 shadow-sm">Git & Version Control</span>
+            <span class="badge bg-dark fs-6 px-3 py-2 shadow-sm">UI/UX Problem Framing</span>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Featured Projects Section (Using Bootstrap Grid and Cards) -->
+<section id="projects" class="container py-5">
+    <h2 class="text-center fw-bold mb-5 border-bottom pb-2 d-inline-block mx-auto border-3 border-info d-block style-width" style="width: max-content;">Featured Projects</h2>
+    <div class="row g-4">
+
+        <!-- Project Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="https://unsplash.com" class="card-img-top project-img" alt="Twilight Town Bakery layout screenshot">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Twilight Town Bakery Web Layout</h5>
+                    <p class="card-text text-muted flex-grow-1">A beautifully themed responsive showcase web project built with dynamic grid layouts, navigation structures, and fluid utility styling tools.</p>
+                    <a href="https://github.com" target="_blank" class="btn btn-outline-dark btn-sm mt-3 w-100 fw-bold">View Repository </a>
+                </div>
             </div>
         </div>
-    </section>
-    
-    
-    <section id="contact" class="section bg-light">
-        <h2>Contact Me</h2>
-        <p>I am currently available for academic collaborations and web design inquires.</p>
-        <p class="contact-info">Contact information available upon request.</p>
-    </section>
-    
-    
-    <footer>
-        <p>2026 Eli Chance. All rights reserved.</p>
-    </footer>
+
+        <!-- Project Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="https://unsplash.com" class="card-img-top project-img" alt="Problem Framing Report layout representation">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">AI Healthcare Problem Framing</h5>
+                    <p class="card-text text-muted flex-grow-1">An architectural engineering documentation assignment using analytical 4Ws framework matrices to resolve emergency resource demands.</p>
+                    <a href="https://github.com" target="_blank" class="btn btn-outline-dark btn-sm mt-3 w-100 fw-bold">View Repository </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="https://unsplash.com" class="card-img-top project-img" alt="Portfolio design snapshot">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Original Portfolio Architecture</h5>
+                    <p class="card-text text-muted flex-grow-1">The early-stage foundational deployment portfolio layout demonstrating standard semantic HTML code blocks and vanilla styles elements.</p>
+                    <a href="https://github.com" target="_blank" class="btn btn-outline-dark btn-sm mt-3 w-100 fw-bold">View Repository </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 6. Contact Section -->
+<section id="contact" class="bg-white py-5 shadow-sm border-top">
+    <div class="container text-center max-width-sm" style="max-width: 600px;">
+        <h2 class="fw-bold mb-3 border-bottom pb-2 d-inline-block border-3 border-info">Contact Me</h2>
+        <p class="text-muted mb-4">I am currently available for advanced project tracks, front-end styling collaborations, and structural layout tasks.</p>
+        <div class="p-3 bg-light rounded border fw-bold text-secondary shadow-sm">
+            Professional contact details available upon academic request.
+        </div>
+    </div>
+</section>
+
+<!-- 7. Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p class="mb-1">&copy; 2026 Eli Chance. All rights reserved.</p>
+        <small class="text-muted">Redesigned and optimized natively inside the Bootstrap responsive layout framework system.</small>
+    </div>
+</footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle CDN Link -->
+    <script src="https://jsdelivr.net"></script>
 </body>
-</html>        
+</html>
+
+
+    
+        
+    
+    
+    
