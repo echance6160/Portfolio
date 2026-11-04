@@ -4,43 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | 404 Error</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .error-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            text-align: center;
-            padding: 20px;
-        }
-        .error-code {
-            font-size: 96px;
-            font-weight: bold;
-            color: blue;
-            margin-bottom: 10px;
-        }
-        .error-message {
-            font-size: 24px;
-            margin-bottom: 25px;
-        }
-    </style>
+    <!--Bootstrap 5 CSS CDN Link-->
+    <link href="https://jsdelivr.net" rel="stylesheet">
 </head>
-<body>
-    
-    <nav class="navbar">
-        <div class="logo">EC</div>
-    </nav>
-    
-    <div class="error-container">
-        <div class="error-code">404</div>
-        <p class="error-message">oops! The page you are looking for cannot be found.</p>
-        <a href="index.html" class="btn"><Return to Homepage</a>
-    </div>
-    
-    <footer>
-        <p>2026 Eli Chance. All rights reserved.</p>
-    </footer>
-</body>
-</html>        
+    <body class="bg-light text-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-info" href"#">EC</a>
+            </div>
+        </nav>
+
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 75vh;">
+            <h1 class="display-1 fw-bold text-info mb-2">404</h1>
+            <h2 class="fw-bold mb-3">Oops! Page Not Found</h2>
+            <p class="lead text-muted mb-4 max-width-sm" style="max-width: 500px;"> The resource path extension layout you are looking for might have been removed, renamed, or is temporarily unavailable.</p>
+            <a href="index.html" class=btn btn-dark btn-lg px-4 fw-bold shadow-sm">Return to Homepage</a>
+        </div>
+
+        <footer class="bg-dark text-white text-center py-4 border-top">
+            <div class="container">
+                <p class="mb-0">&copy; 2026 Eli Chance. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
+        
